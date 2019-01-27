@@ -1,0 +1,849 @@
+{% extends 'dashboard/index.html.twig' %}
+
+{% block title %}Hello LibController!{% endblock %}
+
+{% block navbar %}
+
+{% endblock navbar %}
+
+{% block body %}
+
+    {% block sidebar %}
+        {{ parent() }}
+    {% endblock %}
+    {% block main %}
+        <main class="page-content">
+            <div class="content-navbar">
+                <h4 class="bar-title"><i class="fab fa-accusoft"></i><b class="title-content">
+                        {%  trans %} Library {% endtrans %}
+                    </b></h4>
+            </div>
+            <div class="container-fluid-main">
+                <div class="row">
+                    <div class="col-md-2">
+                        <section class="card">
+                            <article>
+                                <h1 data-accordion-element-trigger>Category</h1>
+                                <div data-accordion-element-content class="content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12 filter-block">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                 </div>
+                            </article>
+                            <article>
+                                <h1 data-accordion-element-trigger>Format</h1>
+                                <div data-accordion-element-content class="content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12 filter-block">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </article>
+                            <article>
+                                <h1 data-accordion-element-trigger>Colors</h1>
+                                <div data-accordion-element-content class="content">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-12 filter-block">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="pretty p-default">
+                                                    <input type="checkbox" />
+                                                    <div class="state">
+                                                        <label>Check</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="container-fluid template-zone">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-md-4">
+                                    <article class="material-card Red">
+                                        <h2>
+                                            <span>Christopher Walken</span>
+                                            <strong>
+                                                <i class="fa fa-fw fa-star"></i>
+                                                The Deer Hunter
+                                            </strong>
+                                        </h2>
+                                        <div class="mc-content">
+                                            <div class="img-container">
+                                                <img class="img-responsive" src="http://u.lorenzoferrara.net/marlenesco/material-card/thumb-christopher-walken.jpg">
+                                            </div>
+                                            <div class="mc-description">
+                                                He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
+                                            </div>
+                                        </div>
+                                        <a class="mc-btn-action">
+                                            <i class="fa fa-bars"></i>
+                                        </a>
+                                        <div class="mc-footer">
+                                            <h4>
+                                                Social
+                                            </h4>
+                                            <a class="fa fa-fw fa-facebook"></a>
+                                            <a class="fa fa-fw fa-twitter"></a>
+                                            <a class="fa fa-fw fa-linkedin"></a>
+                                            <a class="fa fa-fw fa-google-plus"></a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-circle btn-danger" href="">Load More</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    {% endblock main %}
+{% endblock %}
+{% block footer %}
+    <footer class="footer">
+        Copyright
+    </footer>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        [data-accordion-element-content] {
+            height: auto;
+            overflow: hidden;
+            transition: height 0.5s;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #eee;
+            overflow: scroll;
+        }
+
+        .card {
+            width: auto;
+
+            margin: 0;
+
+            border-radius: 2px;
+
+            background: white;
+
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+            padding: 0;
+
+            height: auto;
+        }
+
+        article {
+            position: relative;
+            font-family: "Roboto", sans-serif;
+            transition: all 0.3s;
+            background: #e8eaf6;
+        }
+        article.selected {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            box-shadow: 0 0 5px rgba(2, 2, 2, 0.4);
+            z-index: 2;
+        }
+
+        h1 {
+            position: relative;
+
+            background: #31353d;
+
+            padding: 0.5em;
+
+            font-size: 14px;
+
+            line-height: 30px;
+
+            color: #fff;
+
+            overflow: hidden;
+
+            transition: background 0.3s;
+        }
+        h1:hover, .selected h1 {
+            cursor: pointer;
+            background: #31353db3;
+        }
+        h1:before, h1:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -1px;
+            margin-right: 30px;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+        }
+        h1:before {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-animation: close-line-one-in 0.8s forwards;
+            animation: close-line-one-in 0.8s forwards;
+        }
+        .selected h1:before {
+            -webkit-animation: close-line-one-out 0.8s forwards;
+            animation: close-line-one-out 0.8s forwards;
+        }
+        h1:after {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+            -webkit-animation: close-line-two-in 0.8s forwards;
+            animation: close-line-two-in 0.8s forwards;
+        }
+        .selected h1:after {
+            -webkit-animation: close-line-two-out 0.8s forwards;
+            animation: close-line-two-out 0.8s forwards;
+        }
+
+        .content {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+            transition: all ease-out 0.4s 0.1s;
+        }
+        .selected .content {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+            padding-bottom: 0.5em;
+        }
+
+        p {
+            padding: 25px 30px 40px;
+            background: #e8eaf6;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+        }
+
+        @-webkit-keyframes close-line-one-out {
+            0%,
+            50% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            75% {
+                -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+            }
+            76% {
+                -webkit-transform: translateX(50px) translateY(50px);
+                transform: translateX(50px) translateY(50px);
+            }
+            100% {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+
+        @keyframes close-line-one-out {
+            0%,
+            50% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+            75% {
+                -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+            }
+            76% {
+                -webkit-transform: translateX(50px) translateY(50px);
+                transform: translateX(50px) translateY(50px);
+            }
+            100% {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+        @-webkit-keyframes close-line-one-in {
+            0%,
+            20% {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            60% {
+                -webkit-transform: translateX(50px) translateY(50px) rotate(45deg);
+                transform: translateX(50px) translateY(50px) rotate(45deg);
+            }
+            61% {
+                -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes close-line-one-in {
+            0%,
+            20% {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            60% {
+                -webkit-transform: translateX(50px) translateY(50px) rotate(45deg);
+                transform: translateX(50px) translateY(50px) rotate(45deg);
+            }
+            61% {
+                -webkit-transform: translateX(50px);
+                transform: translateX(50px);
+            }
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+        @-webkit-keyframes close-line-two-out {
+            0%,
+            50% {
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            75% {
+                -webkit-transform: translateY(-50px) rotate(90deg);
+                transform: translateY(-50px) rotate(90deg);
+            }
+            76% {
+                -webkit-transform: translateY(-50px) translateX(50px) rotate(90deg);
+                transform: translateY(-50px) translateX(50px) rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+        }
+        @keyframes close-line-two-out {
+            0%,
+            50% {
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+            75% {
+                -webkit-transform: translateY(-50px) rotate(90deg);
+                transform: translateY(-50px) rotate(90deg);
+            }
+            76% {
+                -webkit-transform: translateY(-50px) translateX(50px) rotate(90deg);
+                transform: translateY(-50px) translateX(50px) rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+        }
+        @-webkit-keyframes close-line-two-in {
+            0% {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+            50% {
+                -webkit-transform: translateY(-50px) translateX(50px) rotate(135deg);
+                transform: translateY(-50px) translateX(50px) rotate(135deg);
+            }
+            51% {
+                -webkit-transform: translateY(-50px) rotate(90deg);
+                transform: translateY(-50px) rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+        @keyframes close-line-two-in {
+            0% {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+            50% {
+                -webkit-transform: translateY(-50px) translateX(50px) rotate(135deg);
+                transform: translateY(-50px) translateX(50px) rotate(135deg);
+            }
+            51% {
+                -webkit-transform: translateY(-50px) rotate(90deg);
+                transform: translateY(-50px) rotate(90deg);
+            }
+            100% {
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var gianniAccordion = (function(){
+            return class {
+
+                transitionendEventName(){
+                    var i,
+                        el = document.createElement('div'),
+                        transitions = {
+                            'transition': 'transitionend',
+                            'OTransition': 'otransitionend',
+                            'MozTransition': 'transitionend',
+                            'WebkitTransition': 'webkitTransitionEnd'
+                        };
+
+                    for (i in transitions) {
+                        if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
+                            return transitions[i];
+                        }
+                    }
+                }
+
+                expand(el){
+                    function resetHeight(ev){
+                        if(ev.target != el.content) return
+                        el.content.removeEventListener(this.transitionendevent, bindEvent);
+
+                        if(!el.isOpen) return
+
+                        requestAnimationFrame(()=>{
+                            el.content.style.transition = '0';
+                            el.content.style.height = 'auto';
+
+                            requestAnimationFrame(()=>{
+                                el.content.style.height = null;
+                                el.content.style.transition = null;
+
+                                this.fire("elementOpened", el);
+                            });
+                        });
+                    }
+
+                    var bindEvent = resetHeight.bind(this);
+                    el.content.addEventListener(this.transitionendevent, bindEvent);
+
+                    el.isOpen = true;
+                    el.content.style.height = el.content.scrollHeight + "px";
+                }
+
+                collapse(el){
+
+                    function endTransition(ev){
+                        if(ev.target != el.content) return
+                        el.content.removeEventListener(this.transitionendevent, bindEvent);
+
+                        if(el.isOpen) return
+
+                        this.fire("elementClosed", el);
+                    }
+
+                    var bindEvent = endTransition.bind(this);
+                    el.content.addEventListener(this.transitionendevent, bindEvent);
+
+                    el.isOpen = false;
+
+                    requestAnimationFrame(()=>{
+                        el.content.style.transition = '0';
+                        el.content.style.height = el.content.scrollHeight + "px";
+
+                        requestAnimationFrame(()=>{
+                            el.content.style.transition = null;
+                            el.content.style.height = 0;
+                        });
+                    });
+                }
+
+                open(el){
+                    el.selected = true;
+                    this.fire("elementSelected", el);
+                    this.expand(el);
+                    el.wrapper.classList.add(this.selectedClass);
+                }
+
+                close(el){
+                    el.selected = false;
+                    this.fire("elementUnselected", el);
+                    this.collapse(el);
+                    el.wrapper.classList.remove(this.selectedClass);
+                }
+
+                toggle(el){
+                    if(el.selected){
+                        this.close(el);
+                    } else {
+                        this.open(el);
+
+                        if(this.oneAtATime){
+                            this.els.filter(e=>e!=el && e.selected).forEach(e=>{
+                                this.close(e);
+                            });
+                        }
+                    }
+                }
+
+                attachEvents(){
+                    this.els.forEach((el, i)=>{
+                        el.trigger.addEventListener("click", this.toggle.bind(this, el));
+                    });
+                }
+
+                setDefaultData(){
+                    this.els = [];
+                    this.events = {
+                        'elementSelected': [],
+                        'elementOpened': [],
+                        'elementUnselected': [],
+                        'elementClosed': []
+                    };
+                    this.transitionendevent = this.transitionendEventName();
+                    this.oneAtATime = true;
+                    this.selectedClass = "selected";
+                    this.trigger = "[data-accordion-element-trigger]";
+                    this.content = "[data-accordion-element-content]";
+                }
+
+                setCustomData(data){
+                    var keys = Object.keys(data);
+
+                    for(var i=0; i<keys.length; i++){
+                        this[ keys[i] ] = data[ keys[i] ];
+                    }
+                }
+
+                fire(eventName, el){
+                    var callbacks = this.events[eventName];
+                    for(var i=0; i<callbacks.length; i++){
+                        callbacks[i]( el )
+                    }
+                }
+
+                on(eventName, cb){
+                    if( !this.events[eventName] ) return
+                    this.events[eventName].push(cb);
+                }
+
+                constructor(data){
+                    this.setDefaultData();
+                    this.setCustomData(data); // ES6 => Object.assign(this, data)
+
+                    [].forEach.call( document.querySelectorAll(this.elements), (el, i)=>{
+                        this.els.push({
+                            wrapper: el,
+                            trigger: el.querySelector(this.trigger),
+                            content: el.querySelector(this.content)
+                        });
+
+                        this.els[i].content.style.height = 0;
+                    });
+
+                    this.attachEvents();
+                }
+
+            }
+        })();
+
+        var myAccordion = new gianniAccordion({
+            elements: ".card article"
+        });
+
+        myAccordion.on("elementSelected", (data)=>{
+            console.log("elementOpened", data);
+        });
+
+        $(function() {
+            $('.material-card > .mc-btn-action').click(function () {
+                var card = $(this).parent('.material-card');
+                var icon = $(this).children('i');
+                icon.addClass('fa-spin-fast');
+
+                if (card.hasClass('mc-active')) {
+                    card.removeClass('mc-active');
+
+                    window.setTimeout(function() {
+                        icon
+                            .removeClass('fa-arrow-left')
+                            .removeClass('fa-spin-fast')
+                            .addClass('fa-bars');
+
+                    }, 800);
+                } else {
+                    card.addClass('mc-active');
+
+                    window.setTimeout(function() {
+                        icon
+                            .removeClass('fa-bars')
+                            .removeClass('fa-spin-fast')
+                            .addClass('fa-arrow-left');
+
+                    }, 800);
+                }
+            });
+        });
+    </script>
+{% endblock %}

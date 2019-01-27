@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Find Something to Lift!{% endblock %}</title>
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet" />
+    {% endblock %}
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+
+<body>
+
+{% block navbar %}
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ path('homepage') }}">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{{ path('homepage') }}">
+                        Home
+                    </a>
+
+                    <a class="navbar-item" href="{{ path('team') }}">
+                        Team
+                    </a>
+
+                    <a class="navbar-item" href="{{ path('documentation') }}">
+                        Documentation
+                    </a>
+
+                    <a class="navbar-item" href="{{ path('donate') }}">
+                        Donate
+                    </a>
+
+                    <a class="navbar-item" href="{{ path('about') }}">
+                        About
+                    </a>
+
+                </div>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <div class="navbar-end">
+                            <div class="navbar-item has-dropdown is-hoverable">
+                                <a class="navbar-link">
+                                    Welcome {{ app.user.username }}
+                                </a>
+                                <div class="navbar-dropdown">
+                                    <a class="navbar-item" href="{{ path('profile') }}">
+                                        Profile
+                                    </a>
+                                    <a class="navbar-item" href="{{ path('dashboard') }}">
+                                        Dashboard
+                                    </a>
+                                    <a class="navbar-item" href="{{ path('fos_user_security_logout') }}">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="button">
+                                    <a href="{{ path('fos_user_registration_register') }}">
+                                        <strong>Sign up</strong>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="navbar-item">
+                                <div class="button">
+                                    <a href="{{ path('dashboard') }}">
+                                        Login
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
+            </div>
+        </nav>
+    </nav>
+{% endblock navbar %}
+    {% block body %}
+        <div class="container-fluid main-content">
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                    <div class="flash-{{ type }} alert alert-info">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">Section</h1>
+                    <h2 class="subtitle">
+                        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+                    </h2>
+                </div>
+            </section>
+        </div>
+    {% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+        Copyright
+    </footer>
+{% endblock %}
+<!-- /container -->
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
+    <script src="{{ asset('assets/js/layout.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+{% extends 'base.html.twig' %}
+
+{% block navbar %}
+
+{% endblock navbar %}
+
+{% block body %}
+
+        {% block sidebar %}
+        <div class="page-wrapper chiller-theme toggled">
+            <nav id="sidebar" class="sidebar-wrapper">
+                <div class="sidebar-content">
+                    <div class="sidebar-brand">
+                        <a href="#">BULMA</a>
+                        {#<div id="close-sidebar">#}
+                            {#<i class="fas fa-times"></i>#}
+                        {#</div>#}
+                    </div>
+                    <div class="sidebar-header">
+                        <div class="user-pic">
+                            <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                                 alt="User picture">
+                        </div>
+                        <div class="user-info">
+          <span class="user-name"> {{ app.user.username }}
+          </span>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <span class="user-role">Admin</span>
+                            {% elseif is_granted('ROLE_USER') %}
+                                <span class="user-role">User</span>
+                            {% endif %}
+
+                            <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+                        </div>
+                    </div>
+                    <!-- sidebar-header  -->
+                    <div class="sidebar-menu">
+                        <ul>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <li class="sidebar-dropdown active">
+                                    <a href="#">
+                                        <i class="fa fa-tachometer-alt"></i>
+                                        <span>Dashboard</span>
+                                        <i class="fas fa-caret-down"></i>
+                                    </a>
+                                    <div class="sidebar-submenu" style="display:block;">
+                                        <ul>
+                                            <li>
+                                                <a href="{{ path('user_control') }}">Users
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ path('template_control') }}">Templates</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ path('images_gallery_control') }}">Gallery</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            {% endif %}
+                            {% if is_granted('ROLE_USER') %}
+                            <li class="">
+                                <a href="{{ path("dashboard") }}">
+                                    <i class="fa fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="far fa-file"></i>
+                                    <span>Templates</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ path('canvas') }}">
+                                                Create New
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('lib') }}">
+                                                Library
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('personal_templates') }}">My Templates</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="fas fa-tshirt"></i>
+                                    <span>Wear Print</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ path('t_shorts') }}">
+                                                T-Shorts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('jacket') }}">
+                                                Jacket
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('pants') }}">
+                                                Pants
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="sidebar-dropdown">
+                                <a href="#">
+                                    <i class="far fa-gem"></i>
+                                    <span>Documentation</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+                                <div class="sidebar-submenu">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ path('tutorial') }}">Tutorial</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('api') }}">API</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- sidebar-menu  -->
+                </div>
+                <!-- sidebar-content  -->
+                <div class="sidebar-footer">
+                    <a href="{{ path('profile') }}">
+                        <i class="fa fa-cog"></i>
+                        <span class="badge-sonar"></span>
+                    </a>
+                    <a href="{{ path('fos_user_security_logout') }}">
+                        <i class="fa fa-power-off"></i>
+                    </a>
+                </div>
+            </nav>
+        {% endblock %}
+        {% block main %}
+            <main class="page-content">
+                    <div class="content-navbar">
+                        <h4 class="bar-title"><i class="fab fa-accusoft"></i><b class="title-content">Dashboard</b></h4>
+                    </div>
+                    <div class="container-fluid-main">
+                        <div class="jumbotron-main">
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+            </main>
+        {% endblock main %}
+{% endblock %}
+{% block footer %}
+            <footer class="footer">
+                Copyright
+            </footer>
+        </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        footer.footer {
+
+            margin: auto;
+            padding: 0.2em;
+            width: 83%;
+            max-width: 100%;
+            position: fixed;
+            display: block;
+            bottom: 0em;
+            left: 17%;
+            text-align: center;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.11.0/dist/sweetalert2.min.css" />
+    <link href="{{ asset('assets/css/dashboard_custom.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.11.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/js/RepLogApp.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            var $wrapper = $('.js-rep-log-table');
+            var repLogApp = new RepLogApp($wrapper);
+        });
+
+        jQuery(function ($) {
+
+            $(".sidebar-dropdown > a").click(function () {
+                $(".sidebar-submenu").slideUp(200);
+                if (
+                    $(this)
+                        .parent()
+                        .hasClass("active")
+                ) {
+                    $(".sidebar-dropdown").removeClass("active");
+                    $(this)
+                        .parent()
+                        .removeClass("active");
+                } else {
+                    $(".sidebar-dropdown").removeClass("active");
+                    $(this)
+                        .next(".sidebar-submenu")
+                        .slideDown(200);
+                    $(this)
+                        .parent()
+                        .addClass("active");
+                }
+            });
+
+            $("#close-sidebar").click(function () {
+                $(".page-wrapper").removeClass("toggled");
+            });
+            $("#show-sidebar").click(function () {
+                $(".page-wrapper").addClass("toggled");
+            });
+        });
+
+
+    </script>
+
+
+{% endblock %}

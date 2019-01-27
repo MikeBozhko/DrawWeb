@@ -1,0 +1,373 @@
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('assets/css/asColorPicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/canvas.css') }}">
+{% endblock %}
+
+{% block body %}
+    <body class="uk-background-muted">
+    <menu class="menu">
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-folder-open"></i> <span class="menu-text">Open</span> </button>
+        </li>
+        <li class="menu-item disabled">
+            <button type="button" class="menu-btn"> <span class="menu-text">Open in New Window</span> </button>
+        </li>
+        <li class="menu-separator"></li>
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-reply"></i> <span class="menu-text">Reply</span> </button>
+        </li>
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-star"></i> <span class="menu-text">Favorite</span> </button>
+        </li>
+        <li class="menu-item submenu">
+            <button type="button" class="menu-btn"> <i class="fa fa-users"></i> <span class="menu-text">Social</span> </button>
+            <menu class="menu">
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-comment"></i> <span class="menu-text">Comment</span> </button>
+        </li>
+        <li class="menu-item submenu">
+            <button type="button" class="menu-btn"> <i class="fa fa-share"></i> <span class="menu-text">Share</span> </button>
+            <menu class="menu">
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-twitter"></i> <span class="menu-text">Twitter</span> </button>
+        </li>
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-facebook-official"></i> <span class="menu-text">Facebook</span> </button>
+        </li>
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-google-plus"></i> <span class="menu-text">Google Plus</span> </button>
+        </li>
+        <li class="menu-item">
+            <button type="button" class="menu-btn"> <i class="fa fa-envelope"></i> <span class="menu-text">Email</span> </button>
+        </li>
+    </menu>
+    </li>
+    </menu>
+    </li>
+    <li class="menu-separator"></li>
+    <li class="menu-item">
+        <button type="button" class="menu-btn"> <i class="fa fa-download"></i> <span class="menu-text">Save</span> </button>
+    </li>
+    <li class="menu-item">
+        <button type="button" class="menu-btn"> <i class="fa fa-edit"></i> <span class="menu-text">Rename</span> </button>
+    </li>
+    <li class="menu-item">
+        <button type="button" class="menu-btn"> <i class="fa fa-trash"></i> <span class="menu-text">Delete</span> </button>
+    </li>
+    </menu>
+
+    <div id="my-id" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title">Confirm clear</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Save&Confirm</button>
+                <button class="uk-button uk-button-primary" type="button">Just erase</button>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="my-id-2" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title">Save template</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="uk-text-right">
+
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="button">Save</button>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="my-id-3" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title">Share Image</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="button">Save</button>
+            </p>
+        </div>
+    </div>
+
+    <ul id="navbar" class="uk-iconnav">
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="New"><i class="zmdi zmdi-file nav-icon"></i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Add more"><i class="zmdi zmdi-collection-plus nav-icon"></i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Edit"><i class="zmdi zmdi-edit nav-icon"></i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id" title="Erase"><i class="zmdi zmdi-close-circle-o nav-icon"></i></a></li>
+        <hr class="nav-divider">
+        <hr class="nav-divider">
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Undo"><i class="material-icons nav-icon">undo</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Redo"><i class="material-icons nav-icon">redo</i></a></li>
+        <hr class="nav-divider">
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Select all"><i class="material-icons nav-icon">select_all</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Crop"><i class="material-icons nav-icon">crop</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Group"><i class="zmdi zmdi-group zmdi-hc-lg nav-icon"></i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Ungroup"><i class="zmdi zmdi-ungroup zmdi-hc-lg nav-icon"></i></a></li>
+        <hr class="nav-divider">
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id-3" title="Share"><i class="material-icons nav-icon">share</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id-2" title="Save"><i class="material-icons nav-icon">save</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id-2" title="Dowload"><i class="material-icons nav-icon">file_download</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id-2" title="Account"><i class="material-icons nav-icon">account_circle</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id-2" title="Help"><i class="material-icons nav-icon">help</i></a></li>
+        <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" uk-toggle="target: #my-id-2" title="Settings"><i class="material-icons nav-icon">settings</i></a></li>
+    </ul>
+
+    <div id="panel-image" uk-offcanvas="mode: push" class="uk-background-secondary">
+        <div class="uk-offcanvas-bar uk-background-secondary">
+            <p class="subtitle fancy"><span>A fancy subtitle</span></p>
+            <form class="uk-search">
+                <input class="uk-search-input" type="search" placeholder="">
+            </form>
+            <div class="grid-images">
+                {%  for data in images %}
+                    <div class="image-list">
+                        <img src="{{ data }}">
+                        <div class="favourite"><a href="#"><i class="zmdi zmdi-star-circle zmdi-hc-2x"></i></a></div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-flex uk-flex-center uk-child-width-1-2">
+        {# Off canvas objects layout #}
+
+        {# Off canvas layout end#}
+
+
+        {# Top navbar panel canvas constrol #}
+
+        {# Top navbar end#}
+
+        {#<main class="uk-container" style="padding: 0 !important; margin: 0 !important;">#}
+
+        {# Right sidebar panel objects#}
+
+
+        <!-- This is an anchor toggling the off-canvas -->
+        <div class="uk-width-1-5">
+            <ul class="uk-iconnav uk-iconnav-vertical side-panel">
+                <li><a uk-toggle="target: #panel-image" href="#" title="Shapes"><i class="zmdi zmdi-shape"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Images"><i class="zmdi zmdi-image-o"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Labels"><i class="zmdi zmdi-labels"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Wallpapers"><i class="zmdi zmdi-wallpaper"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Color"><i class="zmdi zmdi-palette"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Text"><i class="zmdi zmdi-font"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Text"><i class="zmdi zmdi-flower-alt"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Camera"><i class="zmdi zmdi-camera-alt"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Camera"><i class="zmdi zmdi-folder-star-alt"></i></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Camera"><i class="zmdi zmdi-folder-person"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Brush"><i class="zmdi zmdi-brush"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Pencil"><i class="zmdi zmdi-edit"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Spray"><i class="zmdi zmdi-blur"></i></a></li>
+                <li><a uk-toggle="target: #panel-image" href="#" title="Layers"><i class="zmdi zmdi-layers"></i></a></li>
+
+            </ul>
+        </div>
+        {# Right sidebar end#}
+
+        {# Canvas drawing zone#}
+        <div class="uk-width-1-1">
+            <canvas id="canvas" width="500" height="800"></canvas>
+        </div>
+
+        {# Canvas drawing zone end#}
+
+        {# Left sidebar objects properties #}
+        {#<div id="right-sidebar" class="uk-container">#}
+        <div class="uk-width-1-4">
+            <div>
+                <div uk-sortable="group: sortable-group">
+                    <div class="uk-margin">
+                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-card-properties">
+                            <p class="prop-title">Object control</p>
+                            <ul class="uk-iconnav object-properties">
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Copy"><i class="material-icons">content_copy</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Paste"><i class="material-icons">content_paste</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Duplicate"><i class="material-icons">filter_none</i></a></li>
+                                    <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Send to back"><i class="material-icons">flip_to_back</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Forward"><i class="material-icons">flip_to_front</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Lock"><i class="material-icons">lock_outline</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Delete"><i class="material-icons">delete</i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-card-properties">
+                            <h6 class="prop-title">Object Properties</h6>
+                            <ul class="uk-iconnav object-properties">
+                                <li><span class="object-span-text">T:</span><input type="number" min="0" value="15"></li>
+                                <li><span class="object-span-text">L:</span><input type="number" min="0" value="15"></li>
+                                <li><span class="object-span-text">W:</span><input type="number" min="0" value="15"></li>
+                                <li><span class="object-span-text">H:</span><input type="number" min="0" value="15"></li>
+                            </ul>
+                            <ul class="uk-iconnav object-properties">
+                                <li><i class="zmdi zmdi-border-style"></i><input type="number" min="0" value="15"></li>
+                                <li><i class="zmdi zmdi-border-color"></i><input id="stroke-color" type="text" value="15"></li>
+                                <li><i class="zmdi zmdi-format-color-fill"></i><input id="fill-color" type="text" value="#aaaa15"></li>
+                                <li><i class="zmdi zmdi-rotate-ccw"></i><input type="number" min="0" value="15"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-card-properties">
+                            <h6 class="prop-title">Position</h6>
+                            <ul class="uk-iconnav object-properties">
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Bottom"><i class="material-icons">vertical_align_bottom</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Top"><i class="material-icons">vertical_align_top</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Center"><i class="material-icons">vertical_align_center</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Left"><i class="material-icons rotate-left">vertical_align_bottom</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Right"><i class="material-icons rotate-right">vertical_align_top</i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-card-properties">
+                            <h6 class="prop-title">Shadow</h6>
+                            <div class="uk-flex uk-flex-column uk-width-1-1">
+                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                    <div class="uk-container clear-padding">
+                                        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                            <div class="custom-grid-elem">
+                                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                                    <div class="uk-margin">
+                                                        <span class="input-span">Size:</span>
+                                                        <input class="uk-input shadow-input" min="0" type="number" placeholder="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-grid-elem">
+                                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                                    <div class="uk-margin">
+                                                        <span class="input-span" class="input-span">Radius:</span>
+                                                        <input class="uk-input shadow-input" min="0"  type="number" placeholder="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="uk-container clear-padding">
+                                        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                            <div class="custom-grid-elem">
+                                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                                    <div class="uk-margin">
+                                                        <span class="input-span">offset x:</span>
+                                                        <input class="uk-input shadow-input" min="0" type="number" placeholder="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-grid-elem">
+                                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                                    <div class="uk-margin">
+                                                        <span class="input-span" class="input-span">offset y:</span>
+                                                        <input class="uk-input shadow-input" min="0" type="number" placeholder="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="uk-container clear-padding">
+                                        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                                            <div class="custom-grid-elem uk-width-1-3">
+                                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                                    <div class="uk-margin">
+                                                        <span class="input-span"><i class="zmdi zmdi-palette zmdi-hc-2x"></i></span>
+                                                        <input class="uk-input shadow-input" type="text" id="shadow-color" value="#22332">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="custom-grid-elem uk-width-1-2">
+                                                <div class="uk-card uk-card-default uk-card-body shadow-block-properties">
+                                                    <div class="uk-margin">
+                                                        <span class="input-span" class="input-span"> <i class="large material-icons">opacity</i></span>
+                                                        <input class="uk-input shadow-input-range" type="range" placeholder="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-card uk-card-default uk-card-body uk-card-small uk-card-properties">
+                            <h6 class="prop-title">Font</h6>
+                            <ul class="uk-iconnav object-properties">
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Bold"><i class="material-icons">format_bold</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Italic"><i class="material-icons">format_italic</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Underline"><i class="material-icons">format_underlined</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Strike"><i class="material-icons">format_strikethrough</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Sub"><i class="fas fa-subscript"></i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Sup"><i class="fas fa-superscript"></i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Camel Case"><img src="https://img.icons8.com/material/24/000000/lowercase.png" width="16" height="16"></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Capitalize"><img src="https://img.icons8.com/material/24/000000/uppercase.png" width="16" height="16"></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Lower case"><img src="https://img.icons8.com/material/24/000000/lowercase-2.png" width="16" height="16"></a></li>
+                            </ul>
+                            <ul class="uk-iconnav object-properties uk-width-1-1" style="float: right">
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Left"><i class="material-icons">format_align_left</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Center"><i class="material-icons">format_align_center</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Right"><i class="material-icons">format_align_right</i></a></li>
+                                <li><a href="#" data-uk-tooltip="{pos:'bottom-left'}" title="Justify"><i class="material-icons">format_align_justify</i></a></li>
+                            </ul>
+                            <select name="" id="">
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                                <option>Times New Roman</option>
+                            </select>
+                            <ul class="uk-iconnav object-properties">
+                                <li><span data-uk-tooltip="{pos:'bottom-left'}" title="Font Size"><i class="zmdi zmdi-format-size"></i></span><input type="number" value="15"></li>
+                                <li class="backgroundTextColor"><span data-uk-tooltip="{pos:'bottom-left'}" title="Font Background"><i class="zmdi zmdi-format-color-text"></i></span><input id="font-background-color" type="text" value="#fff322"></li>
+                                <li><span data-uk-tooltip="{pos:'bottom-left'}" title="Char spacing"><i class="zmdi zmdi-format-line-spacing rotate-left"></i></span><input type="number" value="15"></li>
+                                <li><span data-uk-tooltip="{pos:'bottom-left'}" title="Line spacing"><i class="zmdi zmdi-format-line-spacing"></i></span><input type="number" value="15"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {#<div class="uk-card uk-card-default uk-card-body" style="z-index: 980;" uk-sticky="bottom: #offset">#}
+                {##}
+            {#</div>#}
+        </div>
+        {#</div>#}
+        {# Left sidebar end#}
+        {#</main>#}
+    </div>
+    </body>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.6.0/fabric.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="{{ asset('assets/js/jquery-asColor.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-asColorPicker.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-asGradient.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/drawing.js') }}"></script>
+{% endblock %}

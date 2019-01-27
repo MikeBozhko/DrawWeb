@@ -1,0 +1,72 @@
+{% extends 'dashboard/index.html.twig' %}
+
+{% block title %}Hello Users Control!{% endblock %}
+
+{% block navbar %}
+
+{% endblock navbar %}
+
+{% block body %}
+
+    {% block sidebar %}
+        {{ parent() }}
+    {% endblock %}
+    {% block main %}
+        <main class="page-content">
+            <div class="content-navbar">
+                <h4 class="bar-title"><i class="fab fa-accusoft"></i><b class="title-content">Users Control</b></h4>
+            </div>
+            {{ name }}
+            {{ surname }}
+            <div class="container-fluid-main uk-background-muted">
+                <table class="uk-table uk-table-middle uk-table-divider">
+                    <thead>
+                    <tr>
+                        <th class="uk-width-small">User ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Role</th>
+                        <th>Edit</th>
+                        <th>Block</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {#{% for user in Users %}#}
+                    <tr>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td>Table Data</td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                        <td><button class="uk-button uk-button-default" type="button">Button</button></td>
+                    </tr>
+                    {#{% endfor %}#}
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    {% endblock main %}
+{% endblock %}
+{% block footer %}
+    <footer class="footer">
+        Copyright
+    </footer>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+{% endblock %}
